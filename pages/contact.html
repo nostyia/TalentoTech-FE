@@ -4,11 +4,51 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MovieSearch - Contact</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+    />
     <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+    <header class="header">
+      <nav class="navbar">
+        <a href="../index.html"
+          ><img src="../img/logo.png" alt="" class="logo"
+        /></a>
+        <input type="checkbox" name="menu-toggle" id="menu-toggle" />
+        <label for="menu-toggle" class="fa-solid fa-bars"></label>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="#">Category</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="search-movie">
+        <input
+          type="search"
+          name="searchMovie"
+          id="search-movie"
+          placeholder="Find movie ..."
+        />
+      </div>
+    </header>
+    <main class="contact">
+      <h2>if you have any questions or concerns, please contact</h2>
+      <form action="https://formspree.io/f/mljdrlgq" method="POST">
+        <label>
+          Your email:
+          <input type="email" name="email" />
+        </label>
+        <label>
+          Your message:
+          <textarea name="message"></textarea>
+        </label>
+        <!-- your other form fields go here -->
+        <button type="submit">Send</button>
+      </form>
+    </main>
+    <footer class="footer"></footer>
+    <script src="./js/app.js"></script>
   </body>
 </html>
