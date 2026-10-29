@@ -132,25 +132,28 @@ img {
 }
 
 .movie {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
+  box-shadow: 0 0 2px 0 #ffffffaa;
+  overflow: hidden;
 }
 .movie h2 {
-  color: white;
-  text-align: center;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
+  color: var(--text-main);
   display: none;
 }
 
+.movie:hover {
+  box-shadow: 0px 0px 5px 0 var(--text-main);
+}
 .movie:hover h2 {
-  background-color: #0f172aee;
-  width: 100%;
-  height: 100%;
-  margin: auto;
   display: block;
+  position: absolute;
+  padding: 100%;
+  background-color: #1e293bbb;
+  font-size: 2rem;
+  text-shadow: 0px 0px 10px var(--bg-main);
 }
 
 /* CONTACT */
