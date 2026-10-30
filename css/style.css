@@ -53,7 +53,9 @@ img {
   padding: 0.5rem;
   filter: hue-rotate(210deg);
 }
-
+.logo:hover {
+  filter: hue-rotate(80deg);
+}
 /* menu toggle */
 #menu-toggle {
   display: none;
@@ -64,7 +66,10 @@ img {
 }
 .navbar label {
   color: var(--bg-main);
-  font-size: 5dvh;
+  font-size: 2rem;
+}
+.navbar label:hover {
+  color: var(--accent-main);
 }
 .navbar ul {
   display: none;
@@ -111,6 +116,10 @@ img {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
   width: 100%;
 }
+.search-movie input:hover {
+  outline: transparent;
+  border: 0.4rem solid var(--accent-main);
+}
 .search-movie input:focus,
 .search-movie input:active {
   outline: transparent;
@@ -145,13 +154,13 @@ img {
 }
 
 .movie:hover {
-  box-shadow: 0px 0px 5px 0 var(--text-main);
+  box-shadow: 0px 0px 5px 0 var(--accent-main);
 }
 .movie:hover h2 {
   display: block;
   position: absolute;
   padding: 100%;
-  background-color: #1e293bbb;
+  background-color: color-mix(in srgb, var(--accent-main) 75%, transparent);
   font-size: 2rem;
   text-shadow: 0px 0px 10px var(--bg-main);
 }
