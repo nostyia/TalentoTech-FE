@@ -34,6 +34,7 @@ img {
   flex-direction: column;
   justify-content: center;
   width: 100%;
+  min-height: 50dvh;
   background: url(../img/header-bg-3.png);
   background-size: cover;
   background-position: center;
@@ -43,7 +44,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--bg-secondary);
+  background-color: color-mix(var(--bg-secondary) 95%, transparent);
   min-height: 4rem;
   padding: 0 2rem;
   position: relative;
@@ -256,7 +257,7 @@ img {
     width: auto;
   }
   .navbar li a {
-    padding: 1rem 2rem;
+    padding: 2rem 2rem;
   }
 }
 
