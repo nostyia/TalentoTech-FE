@@ -28,8 +28,25 @@
           <li><a href="./index.html">Home</a></li>
           <li><a href="#">Category</a></li>
           <li><a href="./pages/contact.html">Contact</a></li>
+          <li>
+            <a href="#cart" id="cart-link"
+              ><i class="fa-solid fa-cart-shopping"></i>Carrito</a
+            >
+          </li>
         </ul>
       </nav>
+      <div class="cart-modal">
+        <h2>Cart list</h2>
+        <p>Empty cart list, please add movie's</p>
+        <ul class="cart-modal-ul"></ul>
+        <a href="#" class="modalclose"
+          ><i class="fa fa-window-close" aria-hidden="true"></i
+        ></a>
+        <div class="cart-reset-buy">
+          <a href="#buy" class="cart-buy">Buy</a>
+          <a href="#reset" class="cart-reset">Reset</a>
+        </div>
+      </div>
       <div class="search-movie">
         <input
           type="search"

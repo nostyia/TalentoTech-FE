@@ -169,6 +169,58 @@ img {
 .movie:hover .addcart {
   background-color: var(--accent-main);
 }
+
+#cart-link i {
+  margin-right: 0.5rem;
+}
+.cart-modal {
+  display: none;
+  flex-direction: column;
+  align-items: left;
+  height: fit-content(30rem);
+  width: fit-content(30rem);
+  color: var(--text-main);
+  background-color: var(--bg-secondary);
+  padding: 4rem;
+  z-index: 999;
+  position: fixed;
+  top: 4rem;
+  right: 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 2px 0 var(--text-main);
+}
+.cart-modal h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.cart-modal p,
+.cart-modal ul {
+  margin-bottom: 2rem;
+}
+.cart-modal li {
+  font-size: 1.2rem;
+}
+.cart-reset-buy {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 0.5rem;
+}
+.cart-reset-buy a {
+  padding: 1rem;
+  background-color: #fff;
+  text-decoration: none;
+  color: var(--text-secondary);
+  border-radius: 0.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.modalclose {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 3rem;
+  color: var(--text-main);
+}
 .addcart {
   position: absolute;
   top: 0;
