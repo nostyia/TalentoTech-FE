@@ -170,6 +170,20 @@ img {
   background-color: var(--accent-main);
 }
 
+.movie-price {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: var(--bg-secondary);
+  z-index: 100;
+  border-color: transparent;
+  padding: 1rem;
+  font-weight: bold;
+  color: var(--text-main);
+  border-radius: 2rem 0 0 0;
+  font-size: 1.2rem;
+}
+
 #cart-link i {
   margin-right: 0.5rem;
 }
@@ -201,15 +215,29 @@ img {
   font-size: 1.2rem;
 }
 .cart-reset-buy {
+  gap: 1.5rem;
   position: absolute;
   bottom: 1.5rem;
-  right: 0.5rem;
+  left: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 .cart-reset-buy a {
   padding: 1rem;
   background-color: #fff;
   text-decoration: none;
-  color: var(--text-secondary);
+  color: var(--bg-main);
+  border-radius: 0.5rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+.total-price {
+  padding: 1rem;
+  background-color: var(--bg-main);
+  text-decoration: none;
+  color: var(--text-main);
   border-radius: 0.5rem;
   font-weight: 600;
   letter-spacing: 1px;
@@ -231,6 +259,7 @@ img {
   padding: 1rem;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
+  font-size: 1.2rem;
   color: var(--text-main);
   border-radius: 0 0 0 2rem;
 }

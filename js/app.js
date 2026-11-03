@@ -3,7 +3,10 @@ const resultados = document.querySelector(".main");
 const searchButton = document.querySelector("#search-movie");
 const cartModalToggle = document.querySelector("#cart-link");
 const cartModalClose = document.querySelector(".modalclose");
-
+const cartReset = document.querySelector(".cart-reset");
+const cartModalList = document.querySelector(".cart-modal-ul");
+const cartPrice = document.querySelector(".total-price");
+let totalPrice = 0;
 cartModalToggle.addEventListener("click", () => {
   const cartModal = document.querySelector(".cart-modal");
   cartModal.style.display = "flex";
@@ -21,6 +24,17 @@ searchButton.addEventListener("keyup", (event) => {
   }
 });
 
+cartReset.addEventListener("click", () => {
+  if (cartModalList) {
+    const cartResetText = document.createElement("p");
+    cartResetText.textContent = "Empty cart list, please add movie's";
+    if (cartModalList.hasChildNodes()) {
+      cartModalList.replaceChildren(cartResetText);
+      totalPrice = 0;
+      cartPrice.textContent = `$ ${totalPrice}`;
+    }
+  }
+});
 /* API THEIMDB */
 const options = {
   method: "GET",
@@ -38,6 +52,7 @@ fetch("https://api.themoviedb.org/3/trending/movie/day?language=en-US", options)
     // console.log(res);
     const movieContainer = document.createElement("div");
     movieContainer.className = "movieContainer";
+
     if (resultados) {
       resultados.append(movieContainer);
     }
@@ -49,15 +64,15 @@ fetch("https://api.themoviedb.org/3/trending/movie/day?language=en-US", options)
       addToCart.classList.add("addcart");
       addToCart.type = "submit";
       addToCart.addEventListener("click", function () {
-        const cartModalList = document.querySelector(".cart-modal-ul");
         const cartModalEmpty = document.querySelector(".cart-modal p");
         if (cartModalEmpty) {
           cartModalEmpty.remove();
         }
         const cartItem = document.createElement("li");
-        cartItem.textContent = element.title;
+        cartItem.textContent = `${element.title} $${parseInt(element.popularity).toFixed(2)}`;
         cartModalList.append(cartItem);
-        // console.log("Added to cart: " + element.title);
+        totalPrice = totalPrice + parseInt(element.popularity.toFixed(2));
+        cartPrice.textContent = `$ ${totalPrice}`;
       });
       movie.append(addToCart);
       movie.className = "movie";
@@ -68,6 +83,10 @@ fetch("https://api.themoviedb.org/3/trending/movie/day?language=en-US", options)
       const movieTitle = document.createElement("h2");
       movieTitle.textContent = element.title;
       movie.append(movieTitle);
+      const price = document.createElement("span");
+      price.textContent = "$ " + parseInt(element.popularity).toFixed(2);
+      price.className = "movie-price";
+      movie.append(price);
       movieContainer.append(movie);
     }
   })
@@ -92,7 +111,6 @@ function searchMovies(title) {
         addToCart.classList.add("addcart");
         addToCart.type = "submit";
         addToCart.addEventListener("click", function () {
-          const cartModalList = document.querySelector(".cart-modal-ul");
           const cartModalEmpty = document.querySelector(".cart-modal p");
           if (cartModalEmpty) {
             cartModalEmpty.remove();
