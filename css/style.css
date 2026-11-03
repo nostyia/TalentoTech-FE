@@ -34,11 +34,6 @@ img {
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  min-height: 50dvh;
-  background: url(../img/header-bg-3.png);
-  background-size: cover;
-  background-position: center;
-  margin-bottom: 1rem;
 }
 .navbar {
   display: flex;
@@ -105,18 +100,25 @@ img {
 }
 
 .search-movie {
-  margin: auto;
+  display: flex;
+  justify-content: center;
   padding: 4rem 0;
-  width: 80%;
+  width: 100dvw;
+  min-height: 30dvh;
+  background: url(../img/hero-bg-img.png);
+  background-size: cover;
+  background-position: center;
+  align-items: center;
+  margin: 1rem 0;
 }
 .search-movie input {
-  padding: 1rem;
   text-align: center;
   border: 0.4rem solid var(--bg-secondary);
   border-radius: 2rem;
   color: var(--bg-main);
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-  width: 100%;
+  width: 75dvw;
+  padding: 0.5rem;
 }
 .search-movie input:hover {
   outline: transparent;
@@ -190,12 +192,11 @@ img {
 .cart-modal {
   display: none;
   flex-direction: column;
-  align-items: left;
-  height: fit-content(30rem);
-  width: fit-content(30rem);
+  min-width: 200px;
+  max-width: 50%;
   color: var(--text-main);
   background-color: var(--bg-secondary);
-  padding: 4rem;
+  padding: 2rem;
   z-index: 999;
   position: fixed;
   top: 4rem;
@@ -338,7 +339,10 @@ img {
     width: auto;
   }
   .navbar li a {
-    padding: 2rem 2rem;
+    padding: 1.5rem 2rem;
+  }
+  .search-movie input {
+    padding: 1rem;
   }
 }
 
@@ -347,11 +351,11 @@ img {
     grid-template-columns: repeat(5, 1fr);
     gap: 2rem;
   }
-  .search-movie {
-    width: 50%;
-  }
   .contact form {
     width: 50%;
     margin: auto;
+  }
+  .cart-modal {
+    top: 5rem;
   }
 }

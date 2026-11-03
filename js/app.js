@@ -134,5 +134,3 @@ function searchMovies(title) {
     })
     .catch((err) => console.error(err));
 }
-
-const cartMenu = document.getElementById("cart-link");

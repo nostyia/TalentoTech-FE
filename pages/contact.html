@@ -3,7 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MovieSearch - Contact</title>
+    <title>MovieSearch - Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
@@ -31,18 +37,16 @@
       </nav>
       <div class="cart-modal">
         <h2>Cart list</h2>
+        <p>Empty cart list, please add movie's</p>
         <ul class="cart-modal-ul"></ul>
         <a href="#" class="modalclose"
           ><i class="fa fa-window-close" aria-hidden="true"></i
         ></a>
-      </div>
-      <div class="search-movie">
-        <input
-          type="search"
-          name="searchMovie"
-          id="search-movie"
-          placeholder="Find movie ..."
-        />
+        <div class="cart-reset-buy">
+          <a href="#buy" class="cart-buy">Buy</a>
+          <a href="#reset" class="cart-reset">Reset</a>
+          <span class="total-price">$0</span>
+        </div>
       </div>
     </header>
     <main class="contact">
