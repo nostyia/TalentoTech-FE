@@ -62,7 +62,7 @@ img {
   border-top: 1px solid var(--bg-main);
 }
 .navbar label {
-  color: var(--bg-main);
+  color: var(--text-secondary);
   font-size: 2rem;
 }
 .navbar label:hover {
@@ -84,6 +84,9 @@ img {
 .navbar li {
   width: 100%;
 }
+.navbar li:last-child {
+  background-color: var(--accent-main);
+}
 .navbar li:hover {
   background-color: var(--bg-main);
 }
@@ -103,7 +106,7 @@ img {
   display: flex;
   justify-content: center;
   padding: 4rem 0;
-  width: 100dvw;
+  width: 100%;
   min-height: 30dvh;
   background: url(../img/hero-bg-img.png);
   background-size: cover;
@@ -149,7 +152,7 @@ img {
   justify-content: center;
   align-items: center;
   position: relative;
-  box-shadow: 0 0 2px 0 #ffffffaa;
+  box-shadow: 0 0 2px 0 var(--text-secondary);
   overflow: hidden;
 }
 .movie h2 {
@@ -215,18 +218,18 @@ img {
   font-size: 3rem;
   margin-bottom: 2rem;
 }
-.cart-modal p,
-.cart-modal ul {
+.cart-modal p {
   margin-bottom: 2rem;
+}
+.cart-modal ul {
+  margin-bottom: 1rem;
+  min-height: 100px;
 }
 .cart-modal li {
   font-size: 1.2rem;
 }
 .cart-reset-buy {
   gap: 1.5rem;
-  position: absolute;
-  bottom: 1.5rem;
-  left: 0.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -256,6 +259,9 @@ img {
   right: 0.5rem;
   font-size: 3rem;
   color: var(--text-main);
+}
+.cart-modal-ul {
+  list-style: none;
 }
 .addcart {
   display: block;
