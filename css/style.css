@@ -173,17 +173,23 @@ img {
 }
 
 .movie-price {
+  display: block;
   position: absolute;
-  bottom: 0;
-  right: 0;
+  top: 0;
+  left: 0;
   background-color: var(--bg-secondary);
   z-index: 100;
   border-color: transparent;
-  padding: 1rem;
+  padding: 1rem 0 1rem 2rem;
   font-weight: bold;
   color: var(--text-main);
-  border-radius: 2rem 0 0 0;
+  border-radius: 0 0 2rem 0;
   font-size: 1.2rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+  width: 50%;
+  text-align: left;
 }
 
 #cart-link i {
@@ -203,6 +209,7 @@ img {
   right: 0.5rem;
   border-radius: 0.5rem;
   box-shadow: 0 0 2px 0 var(--text-main);
+  min-height: 200px;
 }
 .cart-modal h2 {
   font-size: 3rem;
@@ -251,18 +258,22 @@ img {
   color: var(--text-main);
 }
 .addcart {
+  display: block;
   position: absolute;
   top: 0;
   right: 0;
   background-color: var(--bg-secondary);
   z-index: 100;
-  border-color: transparent;
-  padding: 1rem;
+  padding: 1rem 2rem 1rem 0;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   font-size: 1.2rem;
   color: var(--text-main);
   border-radius: 0 0 0 2rem;
+  border-width: 0;
+  width: 50%;
+  text-align: right;
+  margin: 0;
 }
 .addcart:hover {
   background-color: var(--accent-main);
