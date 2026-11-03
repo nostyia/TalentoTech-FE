@@ -13,22 +13,21 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   background-color: var(--bg-main);
-  min-height: 100dvh;
   width: 100%;
   font-family: "Roboto", sans-serif;
 }
-img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
+
 .header {
   display: flex;
   flex-direction: column;
