@@ -129,6 +129,10 @@ function searchMovies(title) {
         const movieTitle = document.createElement("h2");
         movieTitle.textContent = element.title;
         movie.append(movieTitle);
+        const price = document.createElement("span");
+        price.textContent = "$ " + parseInt(element.popularity).toFixed(2);
+        price.className = "movie-price";
+        movie.append(price);
         movieContainer.append(movie);
       }
     })
