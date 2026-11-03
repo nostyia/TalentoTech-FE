@@ -72,19 +72,19 @@ function movieDisplay(movies) {
   resultados.append(movieContainer);
 }
 const searchButton = document.querySelector("#search-movie");
-searchButton.addEventListener("keyup", (event) => {
-  /* if (event.key === "Enter") {
-    searchMovies(searchButton.value);
-  } */
-
-  if (event.key === "Enter") {
+let timer;
+const waitTime = 1000;
+searchButton.addEventListener("input", () => {
+  /* if (event.key === "Enter") {} */ // change keyup event to input and timeout
+  clearTimeout(timer);
+  timer = setTimeout(() => {
     movieContainer.replaceChildren();
     getMovies(searchButton.value).then((data) => {
       for (const movies of data.results) {
         movieDisplay(movies);
       }
     });
-  }
+  }, waitTime);
 });
 
 const cartModalToggle = document.querySelector("#cart-link");
