@@ -216,6 +216,7 @@ body {
 .cart-modal h2 {
   font-size: 3rem;
   margin-bottom: 2rem;
+  border-bottom: 1px solid var(--text-main);
 }
 .cart-modal p {
   margin-bottom: 2rem;
@@ -228,6 +229,8 @@ body {
   font-size: 1.2rem;
 }
 .cart-reset-buy {
+  border-top: 1px solid var(--text-main);
+  padding-top: 1rem;
   gap: 1.5rem;
   display: flex;
   justify-content: center;
@@ -256,7 +259,7 @@ body {
   position: absolute;
   top: 0.5rem;
   right: 0.5rem;
-  font-size: 3rem;
+  font-size: 2rem;
   color: var(--text-main);
 }
 .cart-modal-ul {
