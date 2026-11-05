@@ -378,7 +378,23 @@ body {
     padding: 1rem;
   }
 }
+#movie-shelf {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: space-around;
+  gap: 4rem;
+  width: 100%;
+  height: 100%;
+  padding: 4rem;
+  color: var(--text-main);
+  font-size: 1.5rem;
+}
 
+#movie-shelf img {
+  height: 40rem;
+  width: auto;
+}
 @media (min-width: 1024px) {
   .movieContainer {
     grid-template-columns: repeat(5, 1fr);

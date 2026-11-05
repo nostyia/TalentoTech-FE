@@ -5,7 +5,10 @@ import {} from "./storage.js";
 /* fetch api and display results */
 
 document.addEventListener("DOMContentLoaded", () => {
-  if (!window.location.pathname.endsWith("contact.html")) {
+  if (
+    !window.location.pathname.endsWith("/contact.html") ||
+    !window.location.pathname.endsWith("/category.html")
+  ) {
     getMovies().then((data) => {
       for (const movies of data.results) {
         movieDisplay(movies);
