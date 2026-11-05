@@ -224,6 +224,7 @@ body {
 .cart-modal ul {
   margin-bottom: 1rem;
   min-height: 100px;
+  width: 100%;
 }
 .cart-modal li {
   font-size: 1.2rem;
@@ -264,6 +265,13 @@ body {
 }
 .cart-modal-ul {
   list-style: none;
+}
+.cart-item span {
+  display: inline-block;
+  width: 75%;
+}
+.cart-item span:last-child {
+  width: 25%;
 }
 .addcart {
   display: block;
