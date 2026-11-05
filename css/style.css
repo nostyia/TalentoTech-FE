@@ -193,14 +193,13 @@ body {
   width: 50%;
   text-align: left;
 }
-
 #cart-link i {
   margin-right: 0.5rem;
 }
 .cart-modal {
   display: none;
   flex-direction: column;
-  min-width: 200px;
+  min-width: 250px;
   max-width: 50%;
   color: var(--text-main);
   background-color: var(--bg-secondary);
@@ -298,15 +297,19 @@ body {
 
 /* CONTACT */
 .contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: space-around;
+  gap: 4rem;
   width: 100%;
+  height: 100%;
   padding: 4rem;
   color: var(--text-main);
   font-size: 1.5rem;
 }
 .contact h2 {
-  margin-bottom: 2rem;
   text-transform: capitalize;
-  text-align: center;
   word-spacing: 1rem;
 }
 .contact form,
@@ -327,7 +330,7 @@ body {
 
 .contact form textarea {
   field-sizing: content;
-  min-height: 4rem;
+  min-height: 10rem;
   max-height: 40rem;
   resize: none;
 }
@@ -343,6 +346,9 @@ body {
   align-items: center;
   height: 4rem;
   background-color: var(--bg-secondary);
+  position: fixed;
+  bottom: 0;
+  z-index: 1000;
 }
 .footer p {
   color: var(--text-main);
